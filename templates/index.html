@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <title>Dear Blueno Generator!</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='icon.png') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</head>
+<body>
+  <div class="window">
+    <!-- Window Bar -->
+    <div class="windowBar">
+        <div class="circle" id="redCirc"></div>
+        <div class="circle" id="yellowCirc"></div>
+        <div class="circle" id="greenCirc"></div>
+    </div>
+
+    <!-- Main App -->
+    <div class="app">
+        <span class="title">Generate!</span>
+        <!-- Form -->
+            <div class="form" id="generateForm">
+                <form method="GET" action="/generate">
+                    <label for="prefix">Prefix (optional): </label>
+                    </br> 
+                    <input type="text" name="prefix">
+                    </br>
+                    <input type="submit">
+                </form>
+            </div>
+    </div>
+</div>
+
+<!-- Results window -->
+<div class="window">
+    <div class="windowBar">
+        <div class="circle" id="redCirc"></div>
+        <div class="circle" id="yellowCirc"></div>
+        <div class="circle" id="greenCirc"></div>
+    </div>
+
+    <div class="app">
+      {{result}}
+    </div>
+</div>
+
+</body>
+</html>
