@@ -9,6 +9,5 @@ RUN pip3 install -r requirements.txt
 # Copy files
 COPY ./ ./
 
-# Expose port and run server
-EXPOSE 5000
+# Run server
 CMD ["python3", "app.py"]

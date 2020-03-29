@@ -78,20 +78,21 @@ body {
 /* FORMS STYLING */
 /* =============== */
 
-.form {
-  border-radius: 20px;
-  background-color: #ceced2;
+form {
   text-align: center;
-  padding: 30px;
-  margin: 10px;
+  margin: 20px;
 }
 
 input {
-  margin: 5px;
+  border-radius: 20px;
+  border: 1.5px solid #ceced2;
+  padding: 7px 20px;
+  margin: 10px;
 }
 
 input[type="submit"] {
-  padding: 7px 20px;
+  padding: 10px 30px;
+  background-color: #ceced2;
   border-radius: 20px;
   border: 0px solid black;
   font-family: "Press Start 2P", cursive;
