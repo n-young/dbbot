@@ -8,10 +8,6 @@ app = Flask(__name__)
 def homeRoute():
     return render_template('index.html', result="Generate a Dear Blueno post! Add a prefix if you'd like, and let the mAcHinE lEaRnInG do the rest! Results will be shown here.")
 
-@app.route("/generate")
-def generateRoute():
-    return render_template('index.html', result=generateOne(request.args.get('prefix')))
-
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))
     app.run(host='0.0.0.0', port=port)
