@@ -3,10 +3,10 @@
     <meta charset="utf-8">
     <title>Dear Blueno Generator!</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" type="image/png" href="{{ url_for('static', filename='icon.png') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="icon" type="image/png" href="./static/icon.png">
+    <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap" rel="stylesheet">
-    <script src="{{ url_for('static', filename='script.js') }}"></script>
+    <script src="script.js"></script>
 </head>
 <body>
   <div class="window">
@@ -21,7 +21,7 @@
     <div class="app">
         <span class="title">Generate!</span>
         <!-- Form -->
-                <form method="GET" action="/generate">
+                <form onsubmit="event.preventDefault(); generate()">
                     <label for="prefix">Prefix (optional): </label>
                     </br> 
                     <input type="text" name="prefix">
@@ -40,7 +40,7 @@
     </div>
 
     <div class="app">
-      {{result}}
+      Result will show up here.
     </div>
 </div>
 
